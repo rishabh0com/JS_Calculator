@@ -5,14 +5,14 @@
   font-family: Fira code, sans-serif;
 }
 body {
-  background-color: #eff9f0;
+  background-color: black;
 }
 #container {
   border: 0px solid red;
   width: 30%;
   margin: auto;
   margin-top: 50px;
-  background-color: #22223b;
+  background-color: #15151cec;
   border-radius: 9px;
 }
 #display {
@@ -24,51 +24,89 @@ body {
   font-weight: bolder;
   text-align: right;
   padding-right: 20px;
-  background-color: #7f98a5;
   color: white;
-  border: 2px solid rgb(0, 0, 0);
+  border: 2px solid #22223b;
+  background-color: #22223b;
 }
 #button {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  gap: 3rem;
   padding: 1rem;
 }
-#button > button {
+button {
   outline: none;
   border: none;
   border-radius: 10px;
-  height: 90px;
-  background-color: #22223b;
-
+  height: 3rem;
   font-size: xx-large;
-  box-shadow: rgb(34, 34, 40) 0px 30px 60px -12px inset,
-    rgb(0, 0, 0) 0px 18px 36px -1;
+  background-color: #15151c00;
+  display: flex;
+  align-items: end;
+  justify-content: center;
 }
 .Ac {
-  color: rgb(255, 242, 0);
+  color: #00cc7a;
 }
 .but {
   color: white;
+}
+#clear {
+  color: #00cc7a;
 }
 h1 {
   text-align: center;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: xx-large;
-  margin-top: 30px;
   margin-bottom: 0px;
   font-weight: bolder;
-  color: #997b66;
+  color: #22223b;
 }
 .operator {
-  color: #f0a500;
+  color: #00cc7a;
 }
 /* for smartphone */
 @media all and (min-width: 0px) and (max-width: 720px) {
+  body {
+    background-color: #15151c;
+  }
   #container {
-    width: 90%;
+    width: 98%;
+    height: 85vh;
+  }
+  #button {
+    gap: 3rem;
+  }
+  button {
+    height: 5rem;
+  }
+  #display {
+    margin-top: 8rem;
+    height: 2rem;
+    background-color: #15151c;
+    outline: none;
+    border: none;
+  }
+}
+/* for tablet */
+@media all and (min-width: 721px) and (max-width: 1024px) {
+  #container {
+    width: 80%;
+    height: 80vh;
+  }
+  #button {
+    gap: 3rem;
+  }
+  button {
+    height: 6rem;
   }
 }
 #equal {
-  color: rgb(255, 200, 0);
+  /* border: 2px solid white; */
+  background-color: #00cc7a;
+  grid-row: span 2;
+  height: 100%;
+  align-items: center;
+
+  color: rgb(19, 18, 16);
 }
