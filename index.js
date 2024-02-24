@@ -1,26 +1,70 @@
 // catch the element :
-let btns = document.querySelectorAll(".btn");
-const display = document.getElementById("display");
+const numbtns = document.querySelectorAll(".btn");
+const opebtns = document.querySelectorAll(".operator");
+let display = document.getElementById("display");
 const calculate = document.getElementById("equal");
 const clear = document.querySelector(".Ac");
+const backSpace = document.querySelector("#clear");
 
+// last element of the display :
 // add event on number buttons ann operators :
-btns.forEach((ele) => {
+numbtns.forEach((ele) => {
   ele.addEventListener("click", () => {
-    display.value += ele.innerText;
+    display.value += ele.name;
   });
 });
 
-console.log("btn", btns);
+// add event on operator buttons :
+opebtns.forEach((ele) => {
+  ele.addEventListener("click", () => {
+    if (
+      display.value[display.value.length - 1] === "+" ||
+      display.value[display.value.length - 1] === "*" ||
+      display.value[display.value.length - 1] === "/" ||
+      display.value[display.value.length - 1] === "-" ||
+      display.value[display.value.length - 1] === "."
+    ) {
+      console.log("display value", display.value);
+
+      display.value += "";
+    } else {
+      display.value += display.value && ele.name;
+    }
+  });
+});
+
+// event for - button :
+opebtns[3].addEventListener("click", () => {
+  if (display.value === "") {
+    display.value += "-";
+  }
+});
 
 // add event on equal button  to ealuate the expression :
 calculate.addEventListener("click", () => {
-  display.value = eval(display.value);
+  if (
+    display.value[display.value.length - 1] === "+" ||
+    display.value[display.value.length - 1] === "*" ||
+    display.value[display.value.length - 1] === "/" ||
+    display.value[display.value.length - 1] === "-"
+  ) {
+    display.value = display.value.slice(0, -1);
+    display.value = eval(display.value) ? eval(display.value) : "";
+  } else {
+    display.value = eval(display.value);
+  }
 });
 
 // add event on clear button to clear the display :
 clear.addEventListener("click", () => {
   display.value = "";
+});
+
+// add event for clear button :
+backSpace.addEventListener("click", () => {
+  display.value = display.value.slice(0, -1);
+  // display.value = display.value.substring(0, display.value.length - 1);
+  // display.value = display.value.slice(0, display.value.length - 1);
 });
 
 // //catch the elements :
