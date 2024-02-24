@@ -82,7 +82,7 @@ h1 {
   }
   #button {
     gap: 0rem;
-    row-gap: 2.5rem;
+    row-gap: 2rem;
   }
   button {
     /* border: 1px solid white; */
