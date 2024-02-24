@@ -55,7 +55,7 @@ calculate.addEventListener("click", () => {
   }
 });
 
-// add event on clear button to clear the display :
+// add event on clear button to clear the display : 
 clear.addEventListener("click", () => {
   display.value = "";
 });
