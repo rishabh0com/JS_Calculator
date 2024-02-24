@@ -81,7 +81,7 @@ h1 {
   }
   #button {
     gap: 0rem;
-    row-gap: 4rem;
+    row-gap: 2.5rem;
   }
   button {
     /* border: 1px solid white; */
