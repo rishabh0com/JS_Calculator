@@ -67,38 +67,50 @@ h1 {
 }
 /* for smartphone */
 @media all and (min-width: 0px) and (max-width: 720px) {
+  html {
+    max-height: 100%;
+  }
   body {
+    font-size: 80%;
     background-color: #15151c;
+    height: 40vh;
   }
   #container {
+    /* border: 2px solid white; */
     width: 98%;
-    height: 85vh;
   }
   #button {
-    gap: 3rem;
+    gap: 0rem;
+    row-gap: 4rem;
   }
   button {
-    height: 5rem;
+    /* border: 1px solid white; */
+    height: 4.5rem;
   }
   #display {
-    margin-top: 8rem;
-    height: 2rem;
+    height: 5rem;
     background-color: #15151c;
+    margin: 0;
     outline: none;
     border: none;
+  }
+  #equal {
+    height: 100%;
   }
 }
 /* for tablet */
 @media all and (min-width: 721px) and (max-width: 1024px) {
   #container {
-    width: 80%;
-    height: 80vh;
+    font-size: 80%;
+    width: 60%;
+    height: 100%;
   }
   #button {
-    gap: 3rem;
+    margin-top: 3rem;
+    row-gap: 3rem;
   }
   button {
-    height: 6rem;
+    height: 1rem;
   }
 }
 #equal {
