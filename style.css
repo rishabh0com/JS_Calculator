@@ -76,13 +76,12 @@ h1 {
     height: 40vh;
   }
   #container {
-    margin-top: 0;
+    margin-top: 55%;
     /* border: 2px solid white; */
-    width: 98%;
+    width: 100%;
   }
   #button {
     gap: 0rem;
-    row-gap: 2rem;
   }
   button {
     /* border: 1px solid white; */
