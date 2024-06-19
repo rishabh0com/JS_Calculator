@@ -51,7 +51,8 @@ calculate.addEventListener("click", () => {
     display.value = display.value.slice(0, -1);
     display.value = eval(display.value) ? eval(display.value) : "";
   } else {
-    display.value = eval(display.value);
+    const evaluate = eval(display.value);
+    display.value =  evaluate !== undefined ? evaluate : "";
   }
 });
 
