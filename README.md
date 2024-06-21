@@ -33,10 +33,9 @@ You can check out the live demo [here](https://jscalculator0com.netlify.app/).
 
 ## Technologies Used
 Mention the technologies and frameworks you used in your project. For example:
-- HTML
-- CSS
-- JavaScript
-- Methods
+- HTML for the structure
+- CSS for styling
+- JavaScript for functionality
 <br>
 
 ## Installation
